@@ -1,100 +1,103 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      /* Styling for the entire HTML document */
-      html {
-        /* Background color and image for the HTML */
-        background: #054f8a;
-        background-image: url("https://images.pexels.com/photos/1331395/pexels-photo-1331395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-        background-size: cover; /* Ensure the background image covers the entire viewport */
-        height: 100vh; /* Make the HTML cover the full height of the viewport */
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Styling for the entire HTML document */
+    html {
+      /* Background color and image for the HTML */
+      background: #054f8a;
+      background-image: url("https://images.pexels.com/photos/1331395/pexels-photo-1331395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      background-size: cover; /* Ensure the background image covers the entire viewport */
+      height: 100vh; /* Make the HTML cover the full height of the viewport */
+    }
 
-      /* Styling for the page curl */
-      .curl {
-        width: 120px; /* Initial width of the curl */
-        height: 120px; /* Initial height of the curl */
-        position: absolute; /* Positioned absolutely within its parent */
-        top: 0; /* Positioned at the top of its parent */
-        left: 0; /* Positioned at the left of its parent */
-        background: linear-gradient(
-          /* Creating a linear gradient background for the curl */
-          135deg,
-          #fff,
-          #f3f3f3 45%,
-          #ddd 50%,
-          #aaa 50%,
-          #bbb 56%,
-          #ccc 62%,
-          #f3f3f3 80%,
-          #fff 100%
-        );
-        box-shadow: 0 0 10px #00000080; /* Adding a shadow effect to the curl */
-        transition: all 0.5s ease; /* Applying a smooth transition effect for changes */
-      }
-      /* Pseudo-elements for creating the curl effect */
-      .curl:before,
-      .curl:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        left: 12.5%; /* Positioned at a certain percentage from the left */
-        bottom: 5.8%; /* Positioned at a certain percentage from the bottom */
-        width: 70%; /* Width of the pseudo-element */
-        max-width: 300px; /* Maximum width of the pseudo-element */
-        max-height: 100px; /* Maximum height of the pseudo-element */
-        height: 55%; /* Height of the pseudo-element */
-        box-shadow: 0 12px 15px #0000004d; /* Adding a shadow effect to the pseudo-element */
-        transform: skew(-10deg) rotate(-6deg); /* Applying skew and rotation for the effect */
-      }
+    /* Styling for the page curl */
+    .curl {
+      width: 120px; /* Initial width of the curl */
+      height: 120px; /* Initial height of the curl */
+      position: absolute; /* Positioned absolutely within its parent */
+      top: 0; /* Positioned at the top of its parent */
+      left: 0; /* Positioned at the left of its parent */
+      background: linear-gradient(
+        /* Creating a linear gradient background for the curl */
+        135deg,
+        #fff,
+        #f3f3f3 45%,
+        #ddd 50%,
+        #aaa 50%,
+        #bbb 56%,
+        #ccc 62%,
+        #f3f3f3 80%,
+        #fff 100%
+      );
+      box-shadow: 0 0 10px #00000080; /* Adding a shadow effect to the curl */
+      transition: all 0.5s ease; /* Applying a smooth transition effect for changes */
+    }
+    /* Pseudo-elements for creating the curl effect */
+    .curl:before,
+    .curl:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 12.5%; /* Positioned at a certain percentage from the left */
+      bottom: 5.8%; /* Positioned at a certain percentage from the bottom */
+      width: 70%; /* Width of the pseudo-element */
+      max-width: 300px; /* Maximum width of the pseudo-element */
+      max-height: 100px; /* Maximum height of the pseudo-element */
+      height: 55%; /* Height of the pseudo-element */
+      box-shadow: 0 12px 15px #0000004d; /* Adding a shadow effect to the pseudo-element */
+      transform: skew(-10deg) rotate(-6deg); /* Applying skew and rotation for the effect */
+    }
 
-      .curl:after {
-        /* Styling for the second pseudo-element */
-        left: auto;
-        right: 5.8%; /* Positioned at a certain percentage from the right */
-        bottom: auto;
-        top: 14.16%; /* Positioned at a certain percentage from the top */
-        transform: skew(-15deg) rotate(-84deg); /* Applying skew and rotation for the effect */
-      }
+    .curl:after {
+      /* Styling for the second pseudo-element */
+      left: auto;
+      right: 5.8%; /* Positioned at a certain percentage from the right */
+      bottom: auto;
+      top: 14.16%; /* Positioned at a certain percentage from the top */
+      transform: skew(-15deg) rotate(-84deg); /* Applying skew and rotation for the effect */
+    }
 
-      /* Hover effect for the curl */
-      .curl:hover {
-        width: 240px; /* Enlarged width on hover */
-        height: 240px; /* Enlarged height on hover */
-      }
-      /* Hover effect for pseudo-elements */
-      .curl:hover:before,
-      .curl:hover:after {
-        box-shadow: 0 24px 30px #0000004d; /* Changing the shadow on hover */
-      }
+    /* Hover effect for the curl */
+    .curl:hover {
+      width: 240px; /* Enlarged width on hover */
+      height: 240px; /* Enlarged height on hover */
+    }
+    /* Hover effect for pseudo-elements */
+    .curl:hover:before,
+    .curl:hover:after {
+      box-shadow: 0 24px 30px #0000004d; /* Changing the shadow on hover */
+    }
 
-      /* Styling for the heading */
-      h1 {
-        text-align: center; /* Center-aligning the text */
-        font-size: 5em; /* Setting font size */
-        text-transform: uppercase; /* Transforming text to uppercase */
-        text-shadow: 0 1px 1px #00000033; /* Adding a shadow effect to the text */
-        color: white; /* Text color */
-        margin: 2em 0 0.25em; /* Margin for the heading */
-        padding: 0; /* Padding for the heading */
-      }
+    /* Styling for the heading */
+    h1 {
+      text-align: center; /* Center-aligning the text */
+      font-size: 5em; /* Setting font size */
+      text-transform: uppercase; /* Transforming text to uppercase */
+      text-shadow: 0 1px 1px #00000033; /* Adding a shadow effect to the text */
+      color: white; /* Text color */
+      margin: 2em 0 0.25em; /* Margin for the heading */
+      padding: 0; /* Padding for the heading */
+    }
 
-      /* Styling for the paragraph */
-      p {
-        text-align: center; /* Center-aligning the text */
-        font-weight: bold; /* Making the text bold */
-        color: lightblue; /* Text color */
-        text-shadow: 0 1px 1px #00000033; /* Adding a shadow effect to the text */
-      }
-    </style>
-  </head>
-  <body>
-    <!-- The curl div representing the page curl effect -->
-    <div class="curl"></div>
-    <!-- Heading for the HTML document -->
-    <h1>CSS Page Curl</h1>
-    <!-- Paragraph describing the hover effect -->
-    <p>hover over page curl to resize</p>
-  </body>
+    /* Styling for the paragraph */
+    p {
+      text-align: center; /* Center-aligning the text */
+      font-weight: bold; /* Making the text bold */
+      color: lightblue; /* Text color */
+      text-shadow: 0 1px 1px #00000033; /* Adding a shadow effect to the text */
+    }
+  </style>
+</head>
+<body>
+  <!-- The curl div representing the page curl effect -->
+  <div class="curl"></div>
+  <!-- Heading for the HTML document -->
+  <h1>CSS Page Curl</h1>
+  <!-- Paragraph describing the hover effect -->
+  <p>hover over page curl to resize</p>
+</body>
 </html>
